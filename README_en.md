@@ -1,6 +1,6 @@
 # pinger_app_go
 
-Simple ping app
+Simple ping application
 
 ## Usage:
 
