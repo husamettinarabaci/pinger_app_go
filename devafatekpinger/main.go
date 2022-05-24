@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/AfatekDevelopers/ping_lib_go/devafatekping"
+	"github.com/HsmTeknoloji/ping_lib_go/devhsmtekping"
 )
 
 func main() {
@@ -20,20 +20,20 @@ func main() {
 	flag.BoolVar(&verbose, "v", true, "show ping log values")
 	flag.Parse()
 
-	pinger, err := devafatekping.NewPinger(ipAddress)
+	pinger, err := devhsmtekping.NewPinger(ipAddress)
 	pinger.SetPrivileged(true)
 	pinger.Count = pingCount
 	pinger.Timeout = time.Duration(time.Second * time.Duration(timeOutSecond))
 	logErr(err)
 
-	pinger.OnRecv = func(pkt *devafatekping.Packet) {
+	pinger.OnRecv = func(pkt *devhsmtekping.Packet) {
 		if verbose {
 			fmt.Printf("%d bytes from %s: icmp_seq=%d time=%v\n",
 				pkt.Nbytes, pkt.IPAddr, pkt.Seq, pkt.Rtt)
 		}
 	}
 	var retVal bool = false
-	pinger.OnFinish = func(stats *devafatekping.Statistics) {
+	pinger.OnFinish = func(stats *devhsmtekping.Statistics) {
 		if verbose {
 			fmt.Printf("\n--- %s ping statistics ---\n", stats.Addr)
 			fmt.Printf("%d packets transmitted, %d packets received, %v%% packet loss\n",

@@ -5,17 +5,17 @@ Simple ping application
 ## Usage:
 
 ```shell
-git clone https://github.com/AfatekDevelopers/pinger_app_go.git
-cd pinger_app_go/devafatekpinger
-go mod init github.com/AfatekDevelopers/pinger_app_go/devafatekpinger
+git clone https://github.com/HsmTeknoloji/pinger_app_go.git
+cd pinger_app_go/devhsmtekpinger
+go mod init github.com/HsmTeknoloji/pinger_app_go/devhsmtekpinger
 go get
 go build
-sudo ./devafatekpinger  -address 192.168.1.1 -timeout 5 -count 5 -v=true
+sudo ./devhsmtekpinger  -address 192.168.1.1 -timeout 5 -count 5 -v=true
 #or
-./devafatekpinger -h
+./devhsmtekpinger -h
 ```
 
 ## Developers:
-<img src="https://github.com/AfatekDevelopers/companyfiles/blob/master/afatek-logo.png?raw=true" width="200"/>
-Web Site        : www.afatek.com.tr <br />
-Developer Groups : https://t.me/Afatek/ <br />
+<img src="https://github.com/HsmTeknoloji/companyfiles/blob/master/hsmtek-logo.png?raw=true" width="200"/>
+Web Site        : www.hsmteknoloji.com <br />
+Developer Groups : https://t.me/HsmTeknoloji/ <br />
